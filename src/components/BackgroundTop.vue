@@ -1,6 +1,6 @@
 <template>
   <div class="background-top position relative">
-    <div class="background-top__overlay position-absolute" :style="`background-image: url(${require('../assets/images/bg-1.jpg')})`"/>
+    <div class="background-top__overlay position-absolute" :style="`background-image: url(${require(`../assets/images/${background}`)})`"/>
     <div class="background-top__gradient" />
     <div class="background-top__content">
       <slot />
@@ -10,7 +10,8 @@
 
 <script>
 export default {
-  name: 'BackgroundTop'
+  name: 'BackgroundTop',
+  props: { background: String }
 }
 </script>
 

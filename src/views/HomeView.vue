@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BackgroundTop>
+    <BackgroundTop :background="'bg-1.jpg'">
       <NavBar/>
       <b-container class="py-5">
         <b-row>
@@ -18,6 +18,27 @@
     </div>
     <ProductInfoComponent :info="info"/>
     <SupportedBrandsComponent/>
+    <BackgroundTop :background="'bg-2.jpg'">
+      <b-container class="py-5">
+        <b-row>
+          <b-col lg="8" class="text-white">
+            <h1 class="text-white font-weight-bold text-uppercase">Productos disponibles</h1>
+            <br>
+            <p>Dentro de la gama de productos que ofrecemos están:</p>
+          </b-col>
+        </b-row>
+      </b-container>
+      <b-container>
+        <b-row>
+          <ImageButtonComponent :img="'img-7.jpg'"/>
+          <ImageButtonComponent :img="'img-8.jpg'"/>
+          <ImageButtonComponent :img="'img-9.jpg'"/>
+        </b-row>
+      </b-container>
+    </BackgroundTop>
+    <div class="home-motorcycle-2">
+      <img src="../../src/assets/images/transparent-2.png" alt="Motorcycle">
+    </div>
     <AvailableProductsComponent :products="products"/>
     <FooterComponent/>
   </div>
@@ -30,6 +51,7 @@ import FooterComponent from '@/components/Footer.vue'
 import ProductInfoComponent from '@/components/ProductInfo.vue'
 import SupportedBrandsComponent from '@/components/SupportedBrands.vue'
 import AvailableProductsComponent from '@/components/AvailableProducts.vue'
+import ImageButtonComponent from '@/components/ImageButton.vue'
 export default {
   name: 'HomeView',
   components: {
@@ -38,7 +60,8 @@ export default {
     FooterComponent,
     ProductInfoComponent,
     SupportedBrandsComponent,
-    AvailableProductsComponent
+    AvailableProductsComponent,
+    ImageButtonComponent
   },
   data() {
     return {
@@ -79,6 +102,23 @@ export default {
       @media only screen and (min-width: 1200px) {
         bottom: -7rem;
         height: 33rem;
+      }
+      @media only screen and (max-width: 600px) {
+        opacity: 0;
+      }
+    }
+  }
+  .home-motorcycle-2 {
+    position: relative;
+    img {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      height: 19rem;
+      bottom: -4rem;
+      @media only screen and (min-width: 1200px) {
+        bottom: -4rem;
+        height: 36rem;
       }
       @media only screen and (max-width: 600px) {
         opacity: 0;
