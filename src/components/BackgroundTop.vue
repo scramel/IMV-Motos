@@ -20,7 +20,9 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    @media only screen and (min-width: 992px) {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    }
     &__overlay {
       top: 0;
       left: 0;
@@ -31,8 +33,11 @@ export default {
       position: relative;
       background-repeat: no-repeat;
       // background-size: cover;
-      background-position: center;
+      background-position: bottom;
+      // transform: matrix(1, 0.09, 0.09, 1, 0, 0);
     }
+
+    $gradient: rgb(22, 18, 17);
 
     &__gradient {
       position: absolute;
@@ -42,7 +47,7 @@ export default {
       bottom: 0;
       z-index: -1;
       transform: rotate(180deg);
-      background: linear-gradient(rgba(0, 0, 0) 0%, rgba(0, 0, 0) 100%);
+      background: linear-gradient($gradient 0%, $gradient 100%);
       opacity: .9;
 
       &--blue {
@@ -52,6 +57,7 @@ export default {
     }
 
     &__content {
+      min-height: 700px;
       z-index: 50 !important;
     }
   }

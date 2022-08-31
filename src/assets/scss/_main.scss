@@ -4,3 +4,62 @@ $dark: #221E20;
 
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
+
+// @import url('https://fonts.googleapis.com/css2?family=Rajdhani');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+@font-face {
+    font-family: Rajdhani;
+    src: url('../fonts/rajdhani/Rajdhani-Bold.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/roboto/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/roboto/Roboto-Light.ttf')
+}
+
+// TEXTO
+h1, h2, h3, h4, h5, h6 { font-family: Rajdhani; }
+h1 {
+    font-family: Rajdhani;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+h2 { font-size: 50px; }
+h3 { font-size: 40px; }
+p { 
+    font-family: Roboto-Light;
+    font-size: 18px;
+}
+small { 
+    font-family: Roboto-Regular;
+    font-size: 16px;
+}
+
+// IMÁGENES
+img { align-self: center; }
+
+// BOTONES
+.btn {
+    transition: .2s;
+    &-tertiary {
+        color: $primary;
+        font-family: Rajdhani;
+        text-transform: uppercase;
+        border: 2px solid $primary;
+        background-color: transparent;
+        padding: .5rem 1rem;
+        &:hover {
+            color: $primary;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+    border-radius: 0;
+}
