@@ -1,9 +1,9 @@
 <template>
-  <b-container class="mx-auto">
+  <b-container class="mx-auto mb-5">
     <b-row cols="2" class="available-products-card" v-for="(product, index) in products" :key="index">
       <b-col sm class="p-5 my-auto">
         <h3>{{ product.title }}</h3>
-        <small>{{ product.description }}</small>
+        <small v-html="product.description"/>
         <br>
         <router-link :to="{ name: product.link_to }" class="btn btn-tertiary mt-4" tag="button" v-if="product.button">{{ product.button }} →</router-link>
       </b-col>

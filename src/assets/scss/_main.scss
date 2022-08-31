@@ -9,7 +9,12 @@ $dark: #221E20;
 // @import url('https://fonts.googleapis.com/css2?family=Roboto');
 
 @font-face {
-    font-family: Rajdhani;
+    font-family: Rajdhani-SemiBold;
+    src: url('../fonts/rajdhani/Rajdhani-SemiBold.ttf')
+}
+
+@font-face {
+    font-family: Rajdhani-Bold;
     src: url('../fonts/rajdhani/Rajdhani-Bold.ttf')
 }
 
@@ -24,15 +29,23 @@ $dark: #221E20;
 }
 
 // TEXTO
-h1, h2, h3, h4, h5, h6 { font-family: Rajdhani; }
+h1, h2, h3, h4, h5, h6 { font-family: Rajdhani-Bold; }
 h1 {
-    font-family: Rajdhani;
+    font-family: Rajdhani-Bold;
     font-size: 60px;
     line-height: 60px;
     font-weight: bold;
 }
 h2 { font-size: 50px; }
 h3 { font-size: 40px; }
+h4 { font-size: 30px; }
+h6 { 
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Rajdhani-SemiBold;
+    font-weight: 400;
+}
 p { 
     font-family: Roboto-Light;
     font-size: 18px;
@@ -41,20 +54,62 @@ small {
     font-family: Roboto-Regular;
     font-size: 16px;
 }
+a {
+    transition: .2s;
+}
 
 // IMÁGENES
 img { align-self: center; }
 
 // BOTONES
 .btn {
+    font-family: Rajdhani-Bold;
+    text-transform: uppercase;
     transition: .2s;
-    &-tertiary {
+    padding: .5rem 1rem;
+    text-decoration: none;
+    &-primary {
         color: $primary;
-        font-family: Rajdhani;
-        text-transform: uppercase;
         border: 2px solid $primary;
         background-color: transparent;
-        padding: .5rem 1rem;
+        &:hover {
+            border-color: white;
+            background-color: transparent;
+            a { color: white !important; }
+        }
+    }
+    &-secondary {
+        background-color: transparent;
+        border: none;
+        &:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: $primary;
+            transition: width .3s ease, background-color .3s ease;
+        }
+        &:hover {
+            background-color: transparent;
+            color: $primary;
+            &:after {
+                width: 100%;
+                background: $primary;
+            }
+        }
+        &.router-link-exact-active {
+            color: $primary;
+            &:after {
+                width: 100%;
+                background: $primary;
+            }
+        }
+    }
+    &-tertiary {
+        color: $primary;
+        border: 2px solid $primary;
+        background-color: transparent;
         &:hover {
             color: $primary;
             padding-right: 2rem;

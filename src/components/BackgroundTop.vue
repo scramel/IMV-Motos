@@ -1,7 +1,7 @@
 <template>
   <div class="background-top position relative">
-    <div class="background-top__overlay position-absolute" :style="`background-image: url(${require(`../assets/images/${background}`)})`"/>
-    <div class="background-top__gradient" />
+    <div class="background-top__overlay position-absolute" :class="cover ? 'background-top__cover' : ''" :style="`background-image: url(${require(`../assets/images/${background}`)})`"/>
+    <div class="background-top__gradient"/>
     <div class="background-top__content">
       <slot />
     </div>
@@ -11,7 +11,10 @@
 <script>
 export default {
   name: 'BackgroundTop',
-  props: { background: String }
+  props: {
+    background: String,
+    cover: Boolean
+  }
 }
 </script>
 
@@ -33,9 +36,10 @@ export default {
       position: absolute;
       position: relative;
       background-repeat: no-repeat;
-      // background-size: cover;
       background-position: bottom;
-      // transform: matrix(1, 0.09, 0.09, 1, 0, 0);
+    }
+    &__cover {
+      background-size: cover;
     }
 
     $gradient: rgb(22, 18, 17);
@@ -50,7 +54,6 @@ export default {
       transform: rotate(180deg);
       background: linear-gradient($gradient 0%, $gradient 100%);
       opacity: .9;
-
       &--blue {
         // transform: rotate(180deg);
         background: linear-gradient(0deg, #0E3144 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, #0E3144 0%, rgba(0, 0, 0, 0) 100%);

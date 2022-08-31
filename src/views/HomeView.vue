@@ -18,25 +18,23 @@
     </div>
     <ProductInfoComponent :info="info"/>
     <SupportedBrandsComponent/>
-    <BackgroundTop :background="'bg-2.jpg'">
-      <b-container class="py-5">
+    <BackgroundTop :background="'bg-2.jpg'" :cover="true">
+      <b-container class="home-products py-5">
         <b-row>
           <b-col lg="8" class="text-white">
-            <h1 class="text-white font-weight-bold text-uppercase">Productos disponibles</h1>
-            <br>
+            <h2 class="text-white font-weight-bold text-uppercase">Productos disponibles</h2>
             <p>Dentro de la gama de productos que ofrecemos están:</p>
           </b-col>
         </b-row>
-      </b-container>
-      <b-container>
-        <b-row>
-          <ImageButtonComponent :img="'img-7.jpg'"/>
-          <ImageButtonComponent :img="'img-8.jpg'"/>
-          <ImageButtonComponent :img="'img-9.jpg'"/>
-        </b-row>
+        <br>
+        <b-container>
+          <b-row>
+            <ImageButtonComponent v-for="(imageButton, index) in imageButtons" :key="index" :title="imageButton.title" :img="imageButton.img"/>
+          </b-row>
+        </b-container>
       </b-container>
     </BackgroundTop>
-    <div class="home-motorcycle-2">
+    <div class="home-motorcycle-2" style="z-index: 0;">
       <img src="../../src/assets/images/transparent-2.png" alt="Motorcycle">
     </div>
     <AvailableProductsComponent :products="products"/>
@@ -72,6 +70,16 @@ export default {
         button: 'Conoce más',
         link_to: 'about'
       },
+      imageButtons: [{
+        img: 'img-7.jpg',
+        title: 'Partes mecánicas'
+      }, {
+        img: 'img-8.jpg',
+        title: 'Partes eléctricas'
+      }, {
+        img: 'img-9.jpg',
+        title: 'Accesorios'
+      }],
       products: [{
         title: 'Alcance Geográfico',
         description: 'Nuestro alcance territorial es una de nuestras mayores fortalezas. Con oficinas operativas en Venezuela, Panamá y China, contamos con la capacidad de gestionar todos los aspectos de nuestra empresa, a nivel global.',
@@ -110,6 +118,7 @@ export default {
   }
   .home-motorcycle-2 {
     position: relative;
+    pointer-events: none;
     img {
       position: absolute;
       z-index: 2;
@@ -122,6 +131,20 @@ export default {
       }
       @media only screen and (max-width: 600px) {
         opacity: 0;
+      }
+    }
+  }
+  .home-products {
+    width: 75% !important;
+    margin-right: 5vw !important;
+    div.col { padding: 0; }
+    @media only screen and (max-width: 992px) {
+      p { margin-bottom: 0; }
+      width: 100% !important;
+      margin: auto !important;
+      padding: 3rem !important;
+      div.row {
+        justify-content: center !important;
       }
     }
   }

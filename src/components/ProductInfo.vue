@@ -6,8 +6,8 @@
     <b-col cols="6" class="my-auto product-info-card--text pr-5">
       <h3 class="mb-4">{{ info.title }}</h3>
       <small v-html="info.description"/>
-      <br>
-      <router-link :to="{ name: info.link_to }" class="btn btn-tertiary mt-4" tag="button">{{ info.button }} →</router-link>
+      <br v-if="info.button">
+      <router-link :to="{ name: info.link_to }" class="btn btn-tertiary mt-4" tag="button" v-if="info.button">{{ info.button }} →</router-link>
     </b-col>
   </b-row>
 </template>
