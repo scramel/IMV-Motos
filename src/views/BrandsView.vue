@@ -41,6 +41,9 @@ import SupportedBrandsComponent from '@/components/SupportedBrands.vue'
 import AvailableProductsComponent from '@/components/AvailableProducts.vue'
 import ImageButtonComponentAlt from '@/components/ImageButtonAlt.vue'
 export default {
+  title() {
+    return this.pageTitle
+  },
   name: 'HomeView',
   components: {
     NavBar,
@@ -52,6 +55,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: ('IMV Motos - Marcas, Productos y Logística'),
       products: [{
         title: 'Logística y Gestión Operativa',
         description: 'En IMV tenemos un equipo dedicado a monitorear todos los aspectos relativos a la cadena de valor para garantizar eficiencia en la logística y gestión operativa en el proceso de distribución.<br><br>Hemos construido una relación directa con los fabricantes, con quienes trabajamos de la mano en la supervisión del proceso de fabricación, pruebas, despacho y garantía. Tenemos herramientas tecnológicas que permiten informar oportunamente a nuestros clientes sobre el estatus de sus órdenes, no solo en su trayecto internacional para la importación sino también en la distribución nacional hasta el destino final de sus repuestos.',

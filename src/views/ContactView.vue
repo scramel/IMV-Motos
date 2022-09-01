@@ -87,6 +87,9 @@ import NavBar from '@/components/NavBar.vue'
 import FooterComponent from '@/components/Footer.vue'
 // import ImageButtonComponent from '@/components/ImageButton.vue'
 export default {
+  title() {
+    return this.pageTitle
+  },
   name: 'HomeView',
   components: {
     NavBar,
@@ -95,6 +98,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: ('IMV Motos - Contáctenos'),
       form: {
         email: '',
         name: '',
