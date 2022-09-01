@@ -51,6 +51,9 @@ import SupportedBrandsComponent from '@/components/SupportedBrands.vue'
 import AvailableProductsComponent from '@/components/AvailableProducts.vue'
 import ImageButtonComponent from '@/components/ImageButton.vue'
 export default {
+  title() {
+    return this.pageTitle
+  },
   name: 'HomeView',
   components: {
     NavBar,
@@ -63,6 +66,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: ('IMV Motos - Inicio'),
       info: {
         img: 'img-5',
         title: 'Somos una empresa especializada en la distribución de Repuestos, Partes y Piezas de las principales marcas de motocicletas que circulan en Latinoamérica.',
