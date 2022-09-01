@@ -2,7 +2,7 @@
   <div>
     <b-navbar toggleable="lg" type="dark">
       <router-link :to="{ name: 'home' }">
-        <img src="../../src/assets/images/logo.png" alt="Logo">
+        <img src="../../src/assets/images/logo.webp" alt="Logo">
       </router-link>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>

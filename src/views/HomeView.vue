@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BackgroundTop :background="'bg-1.jpg'" style="min-height: 700px;">
+    <BackgroundTop :background="'bg-1.webp'" style="min-height: 700px;">
       <NavBar/>
       <b-container class="py-5">
         <b-row>
@@ -14,11 +14,11 @@
       </b-container>
     </BackgroundTop>
     <div class="home-motorcycle">
-      <img src="../../src/assets/images/transparent-1.png" alt="Motorcycle">
+      <img src="../../src/assets/images/transparent-1.webp" alt="Motorcycle">
     </div>
     <ProductInfoComponent :info="info"/>
     <SupportedBrandsComponent/>
-    <BackgroundTop :background="'bg-2.jpg'" style="min-height: 38rem;" :cover="true">
+    <BackgroundTop :background="'bg-2.webp'" style="min-height: 38rem;" :cover="true">
       <b-container class="home-products py-5">
         <b-row>
           <b-col lg="8" class="text-white">
@@ -35,7 +35,7 @@
       </b-container>
     </BackgroundTop>
     <div class="home-motorcycle-2" style="z-index: 1;">
-      <img src="../../src/assets/images/transparent-2.png" alt="Motorcycle">
+      <img src="../../src/assets/images/transparent-2.webp" alt="Motorcycle">
     </div>
     <AvailableProductsComponent :products="products"/>
     <FooterComponent/>
@@ -71,13 +71,13 @@ export default {
         link_to: 'about'
       },
       imageButtons: [{
-        img: 'img-7.jpg',
+        img: 'img-7.webp',
         title: 'Partes mecánicas'
       }, {
-        img: 'img-8.jpg',
+        img: 'img-8.webp',
         title: 'Partes eléctricas'
       }, {
-        img: 'img-9.jpg',
+        img: 'img-9.webp',
         title: 'Accesorios'
       }],
       products: [{

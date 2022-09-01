@@ -7,7 +7,7 @@
         <br>
         <router-link :to="{ name: product.link_to }" class="btn btn-tertiary mt-4" tag="button" v-if="product.button">{{ product.button }} →</router-link>
       </b-col>
-      <img :src="require(`../../src/assets/images/${product.img}.png`)" alt="Image">
+      <img :src="require(`../../src/assets/images/${product.img}.webp`)" alt="Image">
     </b-row>
   </b-container>
 </template>

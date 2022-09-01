@@ -1,6 +1,6 @@
 <template>
   <div class="home" style="background-color: white;">
-    <BackgroundTop :background="'bg-1.jpg'">
+    <BackgroundTop :background="'bg-1.webp'">
       <NavBar/>
       <b-container class="py-5 text-center">
         <h1 class="text-white font-weight-bold text-uppercase">Marcas, productos y<br>logística</h1>
@@ -62,13 +62,13 @@ export default {
         img: 'img-4'
       }],
       imageButtons: [{
-        img: 'img-7.jpg',
+        img: 'img-7.webp',
         title: 'Partes mecánicas'
       }, {
-        img: 'img-8.jpg',
+        img: 'img-8.webp',
         title: 'Partes eléctricas'
       }, {
-        img: 'img-9.jpg',
+        img: 'img-9.webp',
         title: 'Accesorios'
       }]
     }
@@ -97,7 +97,7 @@ export default {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      background-image: linear-gradient(to bottom, #f48321ee, #f48321ee), url('../../src/assets/images/bg-2.jpg');
+      background-image: linear-gradient(to bottom, #f48321ee, #f48321ee), url('../../src/assets/images/bg-2.webp');
       background-blend-mode: multiply;
     }
     &--overlay {

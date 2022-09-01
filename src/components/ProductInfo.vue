@@ -1,7 +1,7 @@
 <template>
   <b-row cols="2" class="mx-auto product-info-card p-5">
     <b-col sm class="text-center product-info-card--image">
-      <img :src="require(`../../src/assets/images/${info.img}.png`)" alt="Image">
+      <img :src="require(`../../src/assets/images/${info.img}.webp`)" alt="Image">
     </b-col>
     <b-col cols="6" class="my-auto product-info-card--text pr-5">
       <h3 class="mb-4">{{ info.title }}</h3>

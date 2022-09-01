@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BackgroundTop :background="'bg-1.jpg'">
+    <BackgroundTop :background="'bg-1.webp'">
       <NavBar/>
       <b-container class="py-5 text-center">
         <h1 class="text-white font-weight-bold text-uppercase">Acerca de IMV Motos</h1>
@@ -8,7 +8,7 @@
     </BackgroundTop>
     <ProductInfoComponent :info="info"/>
     <div class="helmet-1">
-      <img :src="require(`../../src/assets/images/transparent-3.png`)" alt="Image">
+      <img :src="require(`../../src/assets/images/transparent-3.webp`)" alt="Image">
     </div>
     <div class="about-view-purpose">
       <div class="about-view-bgimg">
@@ -20,7 +20,7 @@
         <b-col>
           <h2 class="pt-5">Nuestro propósito</h2>
           <p class="m-0 w-75 pb-5">Ser la referencia nacional e internacional en calidad y eficiencia en la distribución de repuestos de Motocicletas. Estar a disposición de nuestros clientes en todos los rincones de la geografía nacional, con opciones de alta calidad y buen precio para sus necesidades de partes y piezas mecánicas.</p>
-          <img class="helmet-2" :src="require(`../../src/assets/images/transparent-3.png`)" alt="Image">
+          <img class="helmet-2" :src="require(`../../src/assets/images/transparent-3.webp`)" alt="Image">
         </b-col>
       </b-container>
     </div>
@@ -46,7 +46,7 @@
       <b-card-group deck>
         <b-card v-for="(card, index) in cards" :key="index"
           :title="card.title"
-          :img-src="require(`../../src/assets/images/${card.img}.png`)"
+          :img-src="require(`../../src/assets/images/${card.img}.webp`)"
           img-alt="Image"
           img-top
           tag="article">
@@ -156,7 +156,7 @@ export default {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-image: linear-gradient(to bottom, #f48321ee, #f48321ee), url('../../src/assets/images/bg-3.jpg');
+        background-image: linear-gradient(to bottom, #f48321ee, #f48321ee), url('../../src/assets/images/bg-3.webp');
         background-blend-mode: multiply;
 
         @media only screen and (max-width: 768px) {

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BackgroundTop :background="'bg-1.jpg'">
+    <BackgroundTop :background="'bg-1.webp'">
       <NavBar/>
       <b-container class="py-5 text-center">
         <h1 class="text-white font-weight-bold text-uppercase">Contáctenos</h1>
@@ -12,7 +12,7 @@
       <b-card no-body class="overflow-hidden text-left">
         <b-row no-gutters>
           <b-col md="6">
-            <b-card-img :src="require(`../../src/assets/images/img-1.png`)" alt="Image" class="rounded-0 p-4"></b-card-img>
+            <b-card-img :src="require(`../../src/assets/images/img-1.webp`)" alt="Image" class="rounded-0 p-4"></b-card-img>
             <b-card-text class="w-75 mx-auto">
                 <img class="mr-2" cols="1" :src="require(`../../src/assets/icons/icon-location.svg`)" alt="Icon">
                 <small cols="8"><span style="color: var(--primary);">Ubicación:</span> Urbanización Obarrio, P.H Plaza Obarrio, Piso 2, Oficina 207, Corregimiento Bella Vista, Panama, República de Panama.</small>

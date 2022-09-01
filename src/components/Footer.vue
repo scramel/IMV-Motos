@@ -3,7 +3,7 @@
     <b-container>
       <b-row align-v="center">
         <b-col lg="3">
-          <img src="../../src/assets/images/logo.png" alt="Logo">
+          <img src="../../src/assets/images/logo.webp" alt="Logo">
           <p>
             <small>
               Todos los derechos reservados 2022. IMVMotos.com
