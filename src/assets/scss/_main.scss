@@ -1,0 +1,178 @@
+// Your variable overrides
+$primary: #F48221;
+$dark: #221E20;
+$light: #F5F5F5;
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+
+// @import url('https://fonts.googleapis.com/css2?family=Rajdhani');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto');
+
+@font-face {
+    font-family: Rajdhani-SemiBold;
+    src: url('../fonts/rajdhani/Rajdhani-SemiBold.ttf')
+}
+
+@font-face {
+    font-family: Rajdhani-Bold;
+    src: url('../fonts/rajdhani/Rajdhani-Bold.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/roboto/Roboto-Regular.ttf')
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/roboto/Roboto-Light.ttf')
+}
+
+// HTML
+body { background-color: var(--light); }
+
+// TEXTO
+h1, h2, h3, h4, h5, h6 { font-family: Rajdhani-Bold; }
+h1 {
+    font-family: Rajdhani-Bold;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
+}
+h2 { font-size: 50px; }
+h3 { font-size: 40px; }
+h4 { font-size: 30px; }
+h6 { 
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Rajdhani-SemiBold;
+    font-weight: 400;
+}
+p { 
+    font-family: Roboto-Light;
+    font-size: 18px;
+}
+small, label { 
+    font-family: Roboto-Regular;
+    font-size: 16px;
+}
+a {
+    transition: .2s;
+}
+
+// IMÁGENES
+img { align-self: center; }
+
+// BOTONES
+.btn {
+    font-family: Rajdhani-Bold;
+    text-transform: uppercase;
+    transition: .2s;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    &-primary {
+        color: $primary;
+        border: 2px solid $primary;
+        background-color: transparent;
+        &:hover {
+            border-color: white;
+            background-color: transparent;
+            a { color: white !important; }
+        }
+        &.router-link-exact-active {
+            background-color: $primary;
+            color: white;
+            border: 2px solid $primary;
+        }
+    }
+    &-secondary {
+        background-color: transparent;
+        border: none;
+        &:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 2px;
+            width: 0px;
+            background: $primary;
+            transition: width .3s ease, background-color .3s ease;
+        }
+        &:hover {
+            background-color: transparent;
+            color: $primary;
+            &:after {
+                width: 100%;
+                background: $primary;
+            }
+        }
+        &.router-link-exact-active {
+            color: $primary;
+            &:after {
+                width: 100%;
+                background: $primary;
+            }
+        }
+    }
+    &-tertiary {
+        color: $primary;
+        border: 2px solid $primary;
+        background-color: transparent;
+        &:hover {
+            color: $primary;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+    border-radius: 0;
+    &-quaternary {
+        color: white;
+        background: black;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &:hover {
+            color: white;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+    &-quintenary {
+        color: white;
+        border: 2px solid $primary;
+        background-color: $primary;
+        &:hover {
+            color: white;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            a { color: $primary !important; }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-nav button {
+        width: 100%;
+        &.btn-secondary.router-link-exact-active:after {
+            display: none;
+        }
+    }
+}
+
+// INPUTS
+input, textarea {
+    &.form-control {
+        background-color: #F5F5F5;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+// CARDS
+.card {
+    border: none;
+    border-radius: 0;
+    &-body {
+        padding: 2rem;
+    }
+}
