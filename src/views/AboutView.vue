@@ -72,6 +72,9 @@ import FooterComponent from '@/components/Footer.vue'
 import ProductInfoComponent from '@/components/ProductInfo.vue'
 import QualityPoliticsComponent from '@/components/QualityPolitics.vue'
 export default {
+  title() {
+    return this.pageTitle
+  },
   name: 'HomeView',
   components: {
     NavBar,
@@ -82,6 +85,7 @@ export default {
   },
   data() {
     return {
+      pageTitle: ('Acerca de IMV Motos'),
       info: {
         img: 'img-6',
         title: 'Somos una empresa especializada en la distribución de Repuestos, Partes y Piezas de las principales marcas de motocicletas que circulan en Latinoamérica.',
