@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <BackgroundTop :background="'bg-1.jpg'">
+    <BackgroundTop :background="'bg-1.jpg'" style="min-height: 700px;">
       <NavBar/>
       <b-container class="py-5">
         <b-row>
@@ -8,7 +8,7 @@
             <h1 class="text-white font-weight-bold text-uppercase">REPUESTOS DE CALIDAD AL<br>MEJOR PRECIO DEL<br>MERCADO</h1>
             <br>
             <p>Nuestro propósito es estar a disposición de nuestros clientes en todos los rincones de la geografía nacional, con opciones de alta calidad y buen precio para sus necesidades de partes y piezas mecánicas.</p>
-            <router-link :to="{ name: 'brands' }" class="btn btn-tertiary mt-4" tag="button">Conozca nuestras marcas →</router-link>
+            <router-link :to="{ name: 'brands' }" class="btn btn-quintenary mt-4" tag="button">Conozca nuestras marcas →</router-link>
           </b-col>
         </b-row>
       </b-container>
@@ -18,7 +18,7 @@
     </div>
     <ProductInfoComponent :info="info"/>
     <SupportedBrandsComponent/>
-    <BackgroundTop :background="'bg-2.jpg'" :cover="true">
+    <BackgroundTop :background="'bg-2.jpg'" style="min-height: 38rem;" :cover="true">
       <b-container class="home-products py-5">
         <b-row>
           <b-col lg="8" class="text-white">
@@ -34,7 +34,7 @@
         </b-container>
       </b-container>
     </BackgroundTop>
-    <div class="home-motorcycle-2" style="z-index: 0;">
+    <div class="home-motorcycle-2" style="z-index: 1;">
       <img src="../../src/assets/images/transparent-2.png" alt="Motorcycle">
     </div>
     <AvailableProductsComponent :products="products"/>
@@ -138,6 +138,9 @@ export default {
     width: 75% !important;
     margin-right: 5vw !important;
     div.col { padding: 0; }
+    @media only screen and (max-width: 1600px) {
+      margin-right: 0vw !important;
+    }
     @media only screen and (max-width: 992px) {
       p { margin-bottom: 0; }
       width: 100% !important;

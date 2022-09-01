@@ -20,7 +20,7 @@ export default {
 
 <style lang="scss" scoped>
   .product-info-card {
-    background-color: #F5F5F5;
+    background-color: var(--light);
     justify-content: center;
     &--image {
       max-width: 500px;

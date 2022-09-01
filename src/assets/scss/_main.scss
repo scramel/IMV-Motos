@@ -1,6 +1,7 @@
 // Your variable overrides
 $primary: #F48221;
 $dark: #221E20;
+$light: #F5F5F5;
 
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
@@ -28,6 +29,9 @@ $dark: #221E20;
     src: url('../fonts/roboto/Roboto-Light.ttf')
 }
 
+// HTML
+body { background-color: var(--light); }
+
 // TEXTO
 h1, h2, h3, h4, h5, h6 { font-family: Rajdhani-Bold; }
 h1 {
@@ -50,7 +54,7 @@ p {
     font-family: Roboto-Light;
     font-size: 18px;
 }
-small { 
+small, label { 
     font-family: Roboto-Regular;
     font-size: 16px;
 }
@@ -76,6 +80,11 @@ img { align-self: center; }
             border-color: white;
             background-color: transparent;
             a { color: white !important; }
+        }
+        &.router-link-exact-active {
+            background-color: $primary;
+            color: white;
+            border: 2px solid $primary;
         }
     }
     &-secondary {
@@ -117,4 +126,53 @@ img { align-self: center; }
         }
     }
     border-radius: 0;
+    &-quaternary {
+        color: white;
+        background: black;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        &:hover {
+            color: white;
+            padding-right: 2rem;
+            padding-left: 2rem;
+        }
+    }
+    &-quintenary {
+        color: white;
+        border: 2px solid $primary;
+        background-color: $primary;
+        &:hover {
+            color: white;
+            padding-right: 2rem;
+            padding-left: 2rem;
+            a { color: $primary !important; }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-nav button {
+        width: 100%;
+        &.btn-secondary.router-link-exact-active:after {
+            display: none;
+        }
+    }
+}
+
+// INPUTS
+input, textarea {
+    &.form-control {
+        background-color: #F5F5F5;
+        border-radius: 0;
+        border: none;
+    }
+}
+
+// CARDS
+.card {
+    border: none;
+    border-radius: 0;
+    &-body {
+        padding: 2rem;
+    }
 }

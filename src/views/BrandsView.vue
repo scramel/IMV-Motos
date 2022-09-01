@@ -1,25 +1,34 @@
 <template>
-  <div class="home">
-    <BackgroundTop :background="'bg-1.jpg'" style="max-height: 16rem;">
+  <div class="home" style="background-color: white;">
+    <BackgroundTop :background="'bg-1.jpg'">
       <NavBar/>
       <b-container class="py-5 text-center">
-        <h1 class="text-white font-weight-bold text-uppercase">Marcas, productos y logística</h1>
+        <h1 class="text-white font-weight-bold text-uppercase">Marcas, productos y<br>logística</h1>
       </b-container>
     </BackgroundTop>
     <SupportedBrandsComponent/>
-    <div class="bg-img">
-      <div class="bg-img--space">
-        <div class="bg-img--overlay"></div>
+    <div style="background-color: var(--light);">
+      <div class="bg-img">
+        <div class="bg-img--space">
+          <div class="bg-img--overlay"></div>
+        </div>
       </div>
+      <b-container class="available-products text-center">
+        <h2>Productos disponibles</h2>
+        <p>Dentro de la gama de productos que ofrecemos están:</p>
+        <b-row>
+          <ImageButtonComponentAlt v-for="(imageButton, index) in imageButtons" :key="index" :title="imageButton.title" :img="imageButton.img" />
+        </b-row>
+      </b-container>
     </div>
-    <b-container class="available-products text-center">
-      <h2>Productos disponibles</h2>
-      <p>Dentro de la gama de productos que ofrecemos están:</p>
-      <b-row>
-        <ImageButtonComponentAlt v-for="(imageButton, index) in imageButtons" :key="index" :title="imageButton.title" :img="imageButton.img" />
-      </b-row>
-    </b-container>
-    <AvailableProductsComponent :products="products"/>
+    <div style="background-color: var(--light);">
+      <AvailableProductsComponent :products="products"/>
+    </div>
+    <div class="pb-5" style="background-color: var(--light);">
+      <b-container class="text-center">
+        <router-link :to="{ name: 'contact' }" class="btn btn-tertiary my-4" tag="button">Contáctenos para más información →</router-link>
+      </b-container>
+    </div>
     <FooterComponent/>
   </div>
 </template>
@@ -69,10 +78,11 @@ export default {
 
 <style lang="scss" scoped>
   .available-products {
+    position: relative;
     color: white;
   }
   .bg-img {
-    z-index: -1;
+    z-index: 0;
     position: relative;
     margin-top: 5vh;
     &--space {

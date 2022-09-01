@@ -10,7 +10,7 @@
             </small>
           </p>
         </b-col>
-        <b-col class="footer-links">
+        <b-col class="footer-links mb-4">
           <router-link :to="{ name: 'home' }">Inicio<br></router-link>
           <router-link :to="{ name: 'about' }">Acerca de IMV Motos<br></router-link>
           <router-link :to="{ name: 'brands' }">Marcas y Productos<br></router-link>

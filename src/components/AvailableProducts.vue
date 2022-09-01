@@ -1,5 +1,5 @@
 <template>
-  <b-container class="mx-auto mb-5">
+  <b-container class="mx-auto pb-5">
     <b-row cols="2" class="available-products-card" v-for="(product, index) in products" :key="index">
       <b-col sm class="p-5 my-auto">
         <h3>{{ product.title }}</h3>

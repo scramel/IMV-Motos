@@ -24,6 +24,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: 1;
     @media only screen and (min-width: 992px) {
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
     }
@@ -61,7 +62,7 @@ export default {
     }
 
     &__content {
-      min-height: 700px;
+      min-height: 310px;
       z-index: 50 !important;
     }
   }
